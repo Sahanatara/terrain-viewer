@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D DEM Terrain Viewer</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #0b0f19;
+        font-family: sans-serif;
+      }
+      #canvas-container {
+        width: 100vw;
+        height: 100vh;
+      }
+      #metadata-panel {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(15, 23, 42, 0.85);
+        color: #e2e8f0;
+        padding: 16px;
+        border-radius: 8px;
+        font-size: 13px;
+        line-height: 1.6;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+        max-width: 260px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="canvas-container"></div>
+    <div id="metadata-panel">
+      <strong>GeoTIFF Metadata</strong><br />
+      Dimensions: <span id="meta-dim">Loading...</span><br />
+      Min Elevation: <span id="meta-min">-</span> m<br />
+      Max Elevation: <span id="meta-max">-</span> m
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
